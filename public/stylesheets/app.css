@@ -1,0 +1,23 @@
+body{
+    background-color:rgb(129, 29, 29);
+    color: greenyellow;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkNj9Fk_P_Q_WCEU70YCYSoiaBoZgSsAVBBiutiE5Zd7d5nn_I);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+#nightnav{
+    background-color: black;
+}
+.container.main{
+    margin-top:7.0em;
+    background-color: white;
+    border-radius: 10px;
+}
+#delete{
+    display: inline;
+}
+#comments{
+    background-color: black;
+}
