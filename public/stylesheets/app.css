@@ -21,3 +21,13 @@ body{
 #comments{
     background-color: black;
 }
+
+#login-form{
+    margin: 20px auto;
+    margin-top: 10vw;
+    align-content: center;
+    text-align: center;
+    width: 40vw;
+    opacity: 0.8;
+}
+

@@ -16,7 +16,7 @@ var storyRoutes     =  require("./routes/stories"),
     indexRoutes     =  require("./routes/index");
 
 
-mongoose.connect("mongodb://localhost/nightmare");
+mongoose.connect("mongodb+srv://mmaj007:Mmamarsh007@urbandev-ivrpr.mongodb.net/test?retryWrites=true&w=majority");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
