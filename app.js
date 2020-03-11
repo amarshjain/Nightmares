@@ -56,11 +56,11 @@ app.use(storyRoutes);
 const hostname = '127.0.0.1';
 const port = 3000;
 
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
-
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("SERVER IS RUNNING..");
+// app.listen(port, hostname, () => {
 //     console.log(`Server running at http://${hostname}:${port}/`);
 // });
+
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("SERVER IS RUNNING..");
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
