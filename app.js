@@ -16,7 +16,7 @@ var storyRoutes     =  require("./routes/stories"),
     indexRoutes     =  require("./routes/index");
 
 
-mongoose.connect("mongodb+srv://mmaj007:Mmamarsh007@urbandev-ivrpr.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://mmaj007:Mmamarsh007@urbandev-ivrpr.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
