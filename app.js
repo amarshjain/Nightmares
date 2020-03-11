@@ -15,8 +15,9 @@ var storyRoutes     =  require("./routes/stories"),
     commentRoutes   =  require("./routes/comments"),
     indexRoutes     =  require("./routes/index");
 
+    var url = process.env.DATABASEURL || "mongodb://localhost/nightmare";
 
-mongoose.connect("mongodb+srv://mmaj007:Mmamarsh007@urbandev-ivrpr.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -58,3 +59,8 @@ const port = 3000;
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+// app.listen(process.env.PORT, process.env.IP, function(){
+//     console.log("SERVER IS RUNNING..");
+//     console.log(`Server running at http://${hostname}:${port}/`);
+// });
