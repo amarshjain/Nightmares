@@ -15,7 +15,7 @@ var storyRoutes     =  require("./routes/stories"),
     commentRoutes   =  require("./routes/comments"),
     indexRoutes     =  require("./routes/index");
 
-    var url = process.env.DATABASEURL || "mongodb://localhost/nightmare";
+    var url = process.env.DATABASE_URL || "mongodb://localhost/nightmare";
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine", "ejs");
@@ -56,11 +56,10 @@ app.use(storyRoutes);
 const hostname = '127.0.0.1';
 const port = 3000;
 
-// app.listen(port, hostname, () => {
-//     console.log(`Server running at http://${hostname}:${port}/`);
-// });
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("SERVER IS RUNNING..");
-    console.log(`Server running at http://${hostname}:${port}/`);
 });
