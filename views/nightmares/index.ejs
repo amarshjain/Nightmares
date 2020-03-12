@@ -12,7 +12,7 @@
                         <div class="content">
                             <div class="meta">
                                 <strong><i class="user circle icon"></i><a><%= story.author.username %></a></strong>
-                               </div><hr>
+                               </div><br>
                             <a class="header" href="/stories/<%= story._id%>"><%= story.title %></a>
                             <div class="meta">
                                 <span><%= story.created.toDateString() %></span>
@@ -27,7 +27,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div><hr>
                 <% }) %>
             </div>
         </div>
