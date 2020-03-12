@@ -15,7 +15,7 @@ var storyRoutes     =  require("./routes/stories"),
     commentRoutes   =  require("./routes/comments"),
     indexRoutes     =  require("./routes/index");
 
-    var url = process.env.DATABASE_URL || "mongodb://localhost/nightmare";
+    var url = process.env.DATABASEURL || "mongodb://localhost/nightmare";
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine", "ejs");
