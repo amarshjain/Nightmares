@@ -11,7 +11,8 @@
                 <span><%= story.created.toDateString() %></span>
             </div>
             <div class="description">
-                <p><%= story.body %></p>
+               
+                <p><%- story.body %></p>
             </div><br>
             <% if(currentUser && story.author.id.equals(currentUser._id)){ %>
             <a class="ui blue inverted button" href="/stories/<%= story._id %>/edit">Edit</a>
