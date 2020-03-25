@@ -15,9 +15,9 @@ var storyRoutes     =  require("./routes/stories"),
     commentRoutes   =  require("./routes/comments"),
     indexRoutes     =  require("./routes/index");
 
-    var url = process.env.DATABASEURL || "mongodb://localhost/nightmare";
+    var url = process.env.DATABASEURL;
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://mmaj007:Mmamarsh007@urbannightmare-b2onr.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
