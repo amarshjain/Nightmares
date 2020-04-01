@@ -7,8 +7,11 @@ expSan         = require("express-sanitizer"),
 passport       = require("passport"),
 localStrategy  = require("passport-local"),
 flash          = require("connect-flash"),
-User           = require("./models/user"),
-seedDB         = require("./seeds");
+User           = require("./models/user");
+
+var compression = require('compression');
+app.use(compression());
+
 
 
 var storyRoutes     =  require("./routes/stories"),
@@ -60,6 +63,3 @@ app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("SERVER IS RUNNING..");
-});
