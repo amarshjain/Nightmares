@@ -63,3 +63,7 @@ app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("SERVER IS RUNNING..");
+});
+
